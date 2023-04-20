@@ -9,59 +9,27 @@ namespace Motohut_API
     {
         private readonly StorageClient _storageClient;
         private readonly string _bucketName;
-        private readonly string _folderPath;
 
-        public FirebaseStorageService(IHttpContextAccessor httpContextAccessor)
+        public FirebaseStorageService()
         {
-            //var email = httpContextAccessor.HttpContext.User.FindFirst("email")?.Value;
-            var email = "b.arslan32@gmail.com";
-            if (string.IsNullOrEmpty(email))
-            {
-                throw new InvalidOperationException("User email not found.");
-            }
-
             _storageClient = StorageClient.Create();
             _bucketName = "motohut-security.appspot.com";
-            _folderPath = $"{email}";
         }
 
-        //public async Task<List<VideoFileInfo>> GetVideoFilesAsync()
-        //{
-        //    var videoFiles = new List<VideoFileInfo>();
-
-        //    var objects = _storageClient.ListObjects(_bucketName, _folderPath);
-        //    foreach (var storageObject in objects)
-        //    {
-        //        if (storageObject.Name.EndsWith(".mp4"))
-        //        {
-        //            var fileSize = storageObject.Size != null ? (long)storageObject.Size : 0;
-        //            var fileName = storageObject.Name.Substring(_folderPath.Length);
-
-        //            var videoFileInfo = new VideoFileInfo
-        //            {
-        //                Name = fileName,
-        //                Size = fileSize
-        //            };
-        //            videoFiles.Add(videoFileInfo);
-        //        }
-        //    }
-
-        //    return videoFiles;
-        //}
-
-        public async Task<List<VideoFileInfo>> GetVideoFilesAsync()
+        public async Task<List<VideoFileInfo>> GetVideoFilesAsync(string email)
         {
             var videoFiles = new List<VideoFileInfo>();
 
             try
             {
                 // Use a `await foreach` loop to iterate over the objects in the bucket
-                await foreach (var storageObject in _storageClient.ListObjectsAsync(_bucketName, _folderPath))
+                var folderPath = $"{email}";
+                await foreach (var storageObject in _storageClient.ListObjectsAsync(_bucketName, folderPath))
                 {
                     if (storageObject.Name.EndsWith(".MP4"))
                     {
                         var fileSize = storageObject.Size != null ? (long)storageObject.Size : 0;
-                        var fileName = storageObject.Name.Substring(_folderPath.Length);
+                        var fileName = storageObject.Name.Substring(folderPath.Length);
 
                         var videoFileInfo = new VideoFileInfo
                         {
@@ -72,12 +40,38 @@ namespace Motohut_API
                     }
                 }
             }
-            catch (Google.GoogleApiException e)
+            catch (Google.GoogleApiException ex)
             {
-                throw e;
+                throw ex;
             }
 
             return videoFiles;
+        }
+
+        public async Task<byte[]> GetVideoDataAsync(string email, string videoName)
+        {
+            try
+            {
+                // Get the full path of the video file in the bucket
+                var filePath = $"{email}/{videoName}";
+
+                // Download the video data
+                var videoData = await _storageClient.GetObjectAsync(_bucketName, filePath);
+
+                // Use the MediaLink property to download the video data
+                using (var memoryStream = new MemoryStream())
+                using (var httpClient = new HttpClient())
+                {
+                    var mediaLink = videoData.MediaLink;
+                    var response = await httpClient.GetAsync(mediaLink);
+                    await response.Content.CopyToAsync(memoryStream);
+                    return memoryStream.ToArray();
+                }
+            }
+            catch (GoogleApiException ex)
+            {
+                throw ex;
+            }
         }
     }
 }

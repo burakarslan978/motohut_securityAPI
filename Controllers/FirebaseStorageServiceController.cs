@@ -14,10 +14,21 @@ namespace Motohut_API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetVideoFilesAsync()
+        public async Task<IActionResult> GetVideoFilesAsync([FromQuery] string email)
         {
-            var videoFiles = await _firebaseStorageService.GetVideoFilesAsync();
+            // Use the email parameter to retrieve the list of video files
+            var videoFiles = await _firebaseStorageService.GetVideoFilesAsync(email);
             return Ok(videoFiles);
         }
+        [HttpGet("{videoName}")]
+        public async Task<IActionResult> GetVideoDataAsync([FromQuery] string email, string videoName)
+        {
+            // Use the email and videoName parameters to retrieve the video data
+            var videoData = await _firebaseStorageService.GetVideoDataAsync(email, videoName);
+
+            // Return the video data as a file
+            return File(videoData, "video/mp4");
+        }
     }
+
 }

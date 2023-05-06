@@ -10,6 +10,7 @@ namespace Motohut_API.Controllers
 
         public FirebaseStorageServiceController(FirebaseStorageService firebaseStorageService)
         {
+
             _firebaseStorageService = firebaseStorageService;
         }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cwLlmrgtSUZ5qhtqSOtlM1+2ETSlxBzMOwH4+8Iuph5xRNnRXQ6flwCaindWJlIp+iOBMZiaeBFlsYCVio5zXg==",
+  "dgSpecHash": "F3mC8ADorHBF1GT2/PGjIcxUx9KkNMYAzRIoQuRKxk3XMC8HMWHaW4p4NqJ2NeZZZbynzMndaa6JR4qTrKu8Yw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\Motohut API\\Motohut API.csproj",
+  "projectFilePath": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\API git clone\\motohut_security\\Motohut API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\grapi\\.nuget\\packages\\google.api.gax\\4.3.1\\google.api.gax.4.3.1.nupkg.sha512",
     "C:\\Users\\grapi\\.nuget\\packages\\google.api.gax.rest\\4.3.1\\google.api.gax.rest.4.3.1.nupkg.sha512",

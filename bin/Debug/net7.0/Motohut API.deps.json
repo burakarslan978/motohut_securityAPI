@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Motohut API/1.0.0": {
         "dependencies": {
+          "Google.Apis.Auth": "1.60.0",
           "Google.Cloud.Storage.V1": "4.4.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"

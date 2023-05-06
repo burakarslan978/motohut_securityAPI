@@ -4,5 +4,6 @@
     {
         public string Name { get; set; }
         public long Size { get; set; }
+        public string DownloadUrl { get; set; }
     }
 }

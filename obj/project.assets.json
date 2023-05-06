@@ -846,6 +846,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Google.Apis.Auth >= 1.60.0",
       "Google.Cloud.Storage.V1 >= 4.4.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -857,11 +858,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\Motohut API\\Motohut API.csproj",
+      "projectUniqueName": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\API git clone\\motohut_security\\Motohut API.csproj",
       "projectName": "Motohut API",
-      "projectPath": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\Motohut API\\Motohut API.csproj",
+      "projectPath": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\API git clone\\motohut_security\\Motohut API.csproj",
       "packagesPath": "C:\\Users\\grapi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\Motohut API\\obj\\",
+      "outputPath": "C:\\Users\\grapi\\Desktop\\ICTsemester3\\Individueel\\API git clone\\motohut_security\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\grapi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -890,6 +891,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Google.Apis.Auth": {
+            "target": "Package",
+            "version": "[1.60.0, )"
+          },
           "Google.Cloud.Storage.V1": {
             "target": "Package",
             "version": "[4.4.0, )"

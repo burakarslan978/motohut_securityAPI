@@ -42,3 +42,50 @@ C:\Users\grapi\Desktop\ICTsemester3\Individueel\Motohut API\obj\Debug\net7.0\Mot
 C:\Users\grapi\Desktop\ICTsemester3\Individueel\Motohut API\obj\Debug\net7.0\Motohut API.genruntimeconfig.cache
 C:\Users\grapi\Desktop\ICTsemester3\Individueel\Motohut API\obj\Debug\net7.0\ref\Motohut API.dll
 C:\Users\grapi\Desktop\ICTsemester3\Individueel\Motohut API\bin\Debug\net7.0\motohut-security-660965b44d5d.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\appsettings.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\motohut-security-660965b44d5d.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Motohut API.exe
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Motohut API.deps.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Motohut API.runtimeconfig.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Motohut API.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Motohut API.pdb
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Api.Gax.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Api.Gax.Rest.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Apis.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Apis.Auth.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Apis.Core.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Apis.Storage.v1.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Google.Cloud.Storage.V1.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.csproj.AssemblyReference.cache
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.AssemblyInfoInputs.cache
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.AssemblyInfo.cs
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.csproj.CoreCompileInputs.cache
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\staticwebassets\msbuild.Motohut API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\staticwebassets\msbuild.build.Motohut API.props
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Motohut API.props
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Motohut API.props
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\scopedcss\bundle\Motohut API.styles.css
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.csproj.CopyComplete
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\refint\Motohut API.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.pdb
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\Motohut API.genruntimeconfig.cache
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\obj\Debug\net7.0\ref\Motohut API.dll
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\motohut-security-769d528f7b55.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\motohut-security-667ba3d83463.json
+C:\Users\grapi\Desktop\ICTsemester3\Individueel\API git clone\motohut_security\bin\Debug\net7.0\client_secret_8269603118-b1gfroc06siiiqhgoejr8kf6l2k71lvo.apps.googleusercontent.com.json

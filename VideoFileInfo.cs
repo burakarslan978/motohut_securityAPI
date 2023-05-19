@@ -2,8 +2,8 @@
 {
     public class VideoFileInfo
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public long Size { get; set; }
-        public string DownloadUrl { get; set; }
+        public string? DownloadUrl { get; set; }
     }
 }

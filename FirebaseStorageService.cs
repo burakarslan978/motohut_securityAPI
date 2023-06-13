@@ -1,17 +1,20 @@
 ﻿using Google;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Storage.v1;
+using Google.Cloud.Datastore.V1;
 using Google.Cloud.Storage.V1;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using static Grpc.Core.Metadata;
 
 namespace Motohut_API
 {
-    public class FirebaseStorageService
+    public class FirebaseStorageService : IFirebaseStorageService
     {
         private readonly StorageClient _storageClient;
         private readonly string _bucketName;
         private readonly UrlSigner _urlSigner;
+        private readonly DatastoreDb _db;
 
         public FirebaseStorageService()
         {
@@ -19,6 +22,8 @@ namespace Motohut_API
             _storageClient = StorageClient.Create(credentials);
             _bucketName = "motohut-security.appspot.com";
             _urlSigner = UrlSigner.FromCredential(credentials);
+            DatastoreClient client = new DatastoreClientBuilder { CredentialsPath = @"./motohut-security-667ba3d83463.json" }.Build();
+            _db = DatastoreDb.Create("motohut-security", "", client);
         }
 
         public async Task<List<VideoFileInfo>> GetVideoFilesAsync(string email)
@@ -79,21 +84,6 @@ namespace Motohut_API
                 throw ex;
             }
         }
-        //gs://motohut-security.appspot.com/b.arslan32@gmail.com/GH012776.MP4
-        //private async Task<string> GetVideoDownloadUrlAsync(string email, string fileName)
-        //{
-        //    // Get a reference to the video file in Firebase Storage
-        //    var fileRef = _storageClient.GetBucket(_bucketName).GetObject(email + fileName);
-
-        //    // Get the download URL for the video file
-        //    var downloadUrl = await fileRef.GetSignedUrlAsync(new SignedUrlOptions
-        //    {
-        //        Method = HttpMethod.Get,
-        //        Expiration = DateTimeOffset.UtcNow.AddHours(1)
-        //    });
-
-        //    return downloadUrl;
-        //}
 
         public async Task<string> GetDownloadUrlAsync(string folderName, string objectName)
         {
@@ -101,6 +91,43 @@ namespace Motohut_API
             var url = await _urlSigner.SignAsync(_bucketName, fullObjectName, TimeSpan.FromHours(1));
             return url;
         }
+
+        public async Task<string> AddUserAsync(string email, int huisnummer, string postcode, string stad, string straat)
+        {
+            Entity user = new Entity
+            {
+                Key = _db.CreateKeyFactory("Adres").CreateIncompleteKey(),
+                ["Email"] = email,
+                ["Huisnummer"] = huisnummer,
+                ["Postcode"] = postcode,
+                ["Stad"] = stad,
+                ["Straat"] = straat
+            };
+            using (DatastoreTransaction transaction = await _db.BeginTransactionAsync())
+            {
+                transaction.Upsert(user);
+                await transaction.CommitAsync();
+            }
+            return user.Key.Path.First().Id.ToString();
+        }
+
+        public async Task<long> CheckEmailAsync(string email)
+        {
+            Query query = new Query("Adres")
+            {
+                Filter = Filter.Equal("Email", email)
+            };
+            var results = await _db.RunQueryAsync(query);
+            if (results.Entities.Any())
+            {
+                return results.Entities.First().Key.Path.First().Id;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
 
     }
 }

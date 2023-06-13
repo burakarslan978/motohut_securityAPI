@@ -6,9 +6,10 @@ namespace Motohut_API.Controllers
     [Route("[controller]")]
     public class FirebaseStorageServiceController : Controller
     {
-        private readonly FirebaseStorageService _firebaseStorageService;
+        //private readonly FirebaseStorageService _firebaseStorageService;
+        private readonly IFirebaseStorageService _firebaseStorageService;
 
-        public FirebaseStorageServiceController(FirebaseStorageService firebaseStorageService)
+        public FirebaseStorageServiceController(IFirebaseStorageService firebaseStorageService)
         {
 
             _firebaseStorageService = firebaseStorageService;
@@ -29,6 +30,20 @@ namespace Motohut_API.Controllers
 
             // Return the video data as a file
             return File(videoData, "video/mp4");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddUserAddress([FromQuery] string email, int huisnummer, string postcode, string stad, string straat)
+        {
+            string docId = await _firebaseStorageService.AddUserAsync(email, huisnummer, postcode, stad, straat);
+            return Ok(new { Id = docId });
+        }
+
+        [HttpGet("CheckEmail")]
+        public async Task<IActionResult> CheckEmail([FromQuery] string email)
+        {
+            long EmailExists = await _firebaseStorageService.CheckEmailAsync(email);
+            return Ok(new { Id = EmailExists.ToString() });
         }
     }
 

@@ -16,7 +16,7 @@ builder.Services.AddCors(options =>
                       });
 });
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbucklee
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

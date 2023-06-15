@@ -23,7 +23,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<FirebaseStorageService>();
+builder.Services.AddSingleton<IFirebaseStorageService, FirebaseStorageService>();
 
 var app = builder.Build();
 

@@ -3,7 +3,7 @@ using Motohut_API;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Policy",

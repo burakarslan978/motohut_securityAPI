@@ -10,7 +10,10 @@ builder.Services.AddCors(options =>
                       policy =>
                       {
                           policy.WithOrigins("http://example.com",
-                                      "http://localhost:3000")
+                                      "http://localhost:3000",
+                                      "https://motohutsecurityfe.vercel.app/",
+                                      "https://motohutsecurityfe.vercel.app",
+                                      "145.93.97.71")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod();
                       });
